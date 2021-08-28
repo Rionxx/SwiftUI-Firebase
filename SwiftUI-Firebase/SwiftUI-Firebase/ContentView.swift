@@ -8,14 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var quotes: [Quote] = testData
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(quotes.indices) { idx in
+                    QuoteCell(quote: $quotes[idx])
+                }
+                Spacer()
+                Text("\(quotes.count)")
+                Spacer()
+            }
+            .navigationTitle("Quotes")
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct QuoteCell: View {
+    @Binding var quote: Quote
+    
+    var body: some View {
+        NavigationLink(destination: QuoteDetail(quote: $quote)) {
+            HStack {
+                Image(systemName: quote.liked ? "heart.fill" : "heart")
+                    .foregroundColor(.red)
+                    .padding(.all)
+                    .font(.title)
+                Text(quote.quoteText)
+                    .font(.title)
+                    .padding(.vertical)
+            }
+        }
     }
 }

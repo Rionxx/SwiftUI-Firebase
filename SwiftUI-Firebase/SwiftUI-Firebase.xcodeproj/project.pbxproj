@@ -13,6 +13,8 @@
 		EAE4570126DA68CE00B1C59C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE4570026DA68CE00B1C59C /* Preview Assets.xcassets */; };
 		EAE4570C26DA68CE00B1C59C /* SwiftUI_FirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4570B26DA68CE00B1C59C /* SwiftUI_FirebaseTests.swift */; };
 		EAE4571726DA68CE00B1C59C /* SwiftUI_FirebaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4571626DA68CE00B1C59C /* SwiftUI_FirebaseUITests.swift */; };
+		EAE4572526DA6F8300B1C59C /* QuoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4572426DA6F8300B1C59C /* QuoteDetail.swift */; };
+		EAE4572726DA714E00B1C59C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4572626DA714E00B1C59C /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		EAE4571226DA68CE00B1C59C /* SwiftUI-FirebaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-FirebaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE4571626DA68CE00B1C59C /* SwiftUI_FirebaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_FirebaseUITests.swift; sourceTree = "<group>"; };
 		EAE4571826DA68CE00B1C59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE4572426DA6F8300B1C59C /* QuoteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetail.swift; sourceTree = "<group>"; };
+		EAE4572626DA714E00B1C59C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				EAE456F926DA68CD00B1C59C /* SwiftUI_FirebaseApp.swift */,
 				EAE456FB26DA68CD00B1C59C /* ContentView.swift */,
+				EAE4572626DA714E00B1C59C /* Quote.swift */,
+				EAE4572426DA6F8300B1C59C /* QuoteDetail.swift */,
 				EAE456FD26DA68CE00B1C59C /* Assets.xcassets */,
 				EAE4570226DA68CE00B1C59C /* Info.plist */,
 				EAE456FF26DA68CE00B1C59C /* Preview Content */,
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE4572726DA714E00B1C59C /* Quote.swift in Sources */,
+				EAE4572526DA6F8300B1C59C /* QuoteDetail.swift in Sources */,
 				EAE456FC26DA68CD00B1C59C /* ContentView.swift in Sources */,
 				EAE456FA26DA68CD00B1C59C /* SwiftUI_FirebaseApp.swift in Sources */,
 			);
