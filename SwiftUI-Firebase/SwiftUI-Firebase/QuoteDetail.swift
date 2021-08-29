@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct QuoteDetail: View {
-    @Binding var quote: Quote
+    var quote: Quote
+    @ObservedObject var quotesFactory = testFactory
     
     var body: some View {
+        let quoteIdx = quotesFactory.index(of: quote)
         VStack {
-            Text(quote.quoteText)
+            Text(quotesFactory.quotes[quoteIdx].quoteText)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
-            Image(systemName: quote.liked ? "heart.fill" : "heart")
+            Image(systemName: quotesFactory.quotes[quoteIdx].liked ? "heart.fill" : "heart")
                 .foregroundColor(.red)
                 .padding(.all)
                 .onTapGesture {
-                    quote.liked.toggle()
+                    quotesFactory.quotes[quoteIdx].liked.toggle()
                 }
         }
         .font(.largeTitle)
@@ -28,6 +30,6 @@ struct QuoteDetail: View {
 
 struct QuoteDetail_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteDetail(quote: .constant(testData[0]))
+        QuoteDetail(quote: testFactory.quotes[0])
     }
 }

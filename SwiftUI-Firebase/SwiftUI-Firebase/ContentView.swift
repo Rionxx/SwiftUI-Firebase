@@ -8,28 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var quotes: [Quote] = testData
+    @ObservedObject var quotesFactory: QuotesFactory
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(quotes.indices) { idx in
-                    QuoteCell(quote: $quotes[idx])
+                ForEach(quotesFactory.quotes) { quote in
+                    QuoteCell(quote: quote)
                 }
+                .onDelete(perform: { indexSet in
+                    quotesFactory.quotes.remove(atOffsets: indexSet)
+                })
+                .onMove(perform: { indices, newOffset in
+                    quotesFactory.quotes.move(fromOffsets: indices, toOffset: newOffset)
+                })
+                
                 Spacer()
-                Text("\(quotes.count)")
+                Text("\(quotesFactory.quotes.count) Quotes")
+                    .multilineTextAlignment(.center)
                 Spacer()
             }
             .navigationTitle("Quotes")
+            .toolbar {
+                EditButton()
+            }
         }
     }
 }
 
 struct QuoteCell: View {
-    @Binding var quote: Quote
+     var quote: Quote
     
     var body: some View {
-        NavigationLink(destination: QuoteDetail(quote: $quote)) {
+        NavigationLink(destination: QuoteDetail(quote: quote)) {
             HStack {
                 Image(systemName: quote.liked ? "heart.fill" : "heart")
                     .foregroundColor(.red)

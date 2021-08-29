@@ -15,6 +15,7 @@
 		EAE4571726DA68CE00B1C59C /* SwiftUI_FirebaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4571626DA68CE00B1C59C /* SwiftUI_FirebaseUITests.swift */; };
 		EAE4572526DA6F8300B1C59C /* QuoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4572426DA6F8300B1C59C /* QuoteDetail.swift */; };
 		EAE4572726DA714E00B1C59C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4572626DA714E00B1C59C /* Quote.swift */; };
+		EAE4572926DB056100B1C59C /* QuotesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4572826DB056100B1C59C /* QuotesFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EAE4571826DA68CE00B1C59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE4572426DA6F8300B1C59C /* QuoteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetail.swift; sourceTree = "<group>"; };
 		EAE4572626DA714E00B1C59C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		EAE4572826DB056100B1C59C /* QuotesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				EAE456F926DA68CD00B1C59C /* SwiftUI_FirebaseApp.swift */,
 				EAE456FB26DA68CD00B1C59C /* ContentView.swift */,
 				EAE4572626DA714E00B1C59C /* Quote.swift */,
+				EAE4572826DB056100B1C59C /* QuotesFactory.swift */,
 				EAE4572426DA6F8300B1C59C /* QuoteDetail.swift */,
 				EAE456FD26DA68CE00B1C59C /* Assets.xcassets */,
 				EAE4570226DA68CE00B1C59C /* Info.plist */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE4572926DB056100B1C59C /* QuotesFactory.swift in Sources */,
 				EAE4572726DA714E00B1C59C /* Quote.swift in Sources */,
 				EAE4572526DA6F8300B1C59C /* QuoteDetail.swift in Sources */,
 				EAE456FC26DA68CD00B1C59C /* ContentView.swift in Sources */,
