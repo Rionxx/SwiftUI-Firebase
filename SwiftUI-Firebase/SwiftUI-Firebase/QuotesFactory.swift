@@ -6,12 +6,28 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 class QuotesFactory: ObservableObject {
     @Published var quotes: [Quote]
     
     init(quotes: [Quote] = []) {
         self.quotes = quotes
+        let db = Firestore.firestore()
+        db.collection("Quotes").addSnapshotListener { (snap, err) in
+            if err != nil {
+                print("Error")
+                return
+            }
+            for i in snap!.documentChanges {
+                //let documentID = i.document.documentID
+                let dbQuoteText = i.document.get("quoteText") as! String
+                let dbLiked = i.document.get("liked") as! Bool
+                DispatchQueue.main.async {
+                    self.quotes.append(Quote(quoteText: dbQuoteText, liked: dbLiked))
+                }
+            }
+        }
     }
     
     func index(of quote: Quote) -> Int {
@@ -25,3 +41,4 @@ class QuotesFactory: ObservableObject {
 }
 
 let testFactory = QuotesFactory(quotes: testData) 
+
