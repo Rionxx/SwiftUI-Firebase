@@ -46,7 +46,7 @@ struct ContentView: View {
             if showAdd {
                 HStack {
                     TextField("Placeholder", text: $quoteTextField)
-                    Button("Save Quote", action: newQuote)
+                    Button("Save Quote", action: saveQuote)
                 }
                 .padding(.all)
                 .frame(height: 100)
@@ -60,7 +60,8 @@ struct ContentView: View {
     
     func saveQuote() {
         let db = Firestore.firestore()
-        db.collection("Quotes").document().setData(["quoteText": quoteTextField, "liked": false])
+        let id = UUID().uuidString
+        db.collection("Quotes").document().setData(["id": id, "quoteText": quoteTextField, "liked": false])
         showAdd = false
     }
 }

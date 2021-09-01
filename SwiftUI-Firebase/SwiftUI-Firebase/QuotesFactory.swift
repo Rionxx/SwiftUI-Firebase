@@ -21,10 +21,14 @@ class QuotesFactory: ObservableObject {
             }
             for i in snap!.documentChanges {
                 //let documentID = i.document.documentID
+                let dbID = i.document.get("quoteText") as! String
                 let dbQuoteText = i.document.get("quoteText") as! String
                 let dbLiked = i.document.get("liked") as! Bool
-                DispatchQueue.main.async {
-                    self.quotes.append(Quote(quoteText: dbQuoteText, liked: dbLiked))
+                
+                if let quoteID = UUID(uuidString: dbID) {
+                    DispatchQueue.main.async {
+                        self.quotes.append(Quote(id: quoteID, quoteText: dbQuoteText, liked: dbLiked))
+                    }
                 }
             }
         }
