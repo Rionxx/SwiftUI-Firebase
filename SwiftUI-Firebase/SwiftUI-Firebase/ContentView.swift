@@ -21,7 +21,11 @@ struct ContentView: View {
                         QuoteCell(quote: quote)
                     }
                     .onDelete(perform: { indexSet in
-                        quotesFactory.quotes.remove(atOffsets: indexSet)
+                        //quotesFactory.quotes.remove(atOffsets: indexSet)
+                        let quoteUUID = indexSet.map {
+                            quotesFactory.quotes[$0].id
+                        }
+                        self.deleteQuote(with: quoteUUID[0].uuidString)
                     })
                     .onMove(perform: { indices, newOffset in
                         quotesFactory.quotes.move(fromOffsets: indices, toOffset: newOffset)
@@ -50,6 +54,22 @@ struct ContentView: View {
                 }
                 .padding(.all)
                 .frame(height: 100)
+            }
+        }
+    }
+    
+    func deleteQuote(with id: String) {
+        let db = Firestore.firestore()
+        db.collection("Quotes").whereField("id", isEqualTo: id).getDocuments{(snap, err) in
+            if err != nil {
+                print("Error")
+                return
+            }
+            
+            for i in snap!.documents {
+                DispatchQueue.main.async {
+                    i.reference.delete()
+                }
             }
         }
     }

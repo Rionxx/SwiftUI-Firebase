@@ -19,16 +19,17 @@ class QuotesFactory: ObservableObject {
                 print("Error")
                 return
             }
-            for i in snap!.documentChanges {
-                //let documentID = i.document.documentID
-                let dbID = i.document.get("quoteText") as! String
-                let dbQuoteText = i.document.get("quoteText") as! String
-                let dbLiked = i.document.get("liked") as! Bool
-                
-                if let quoteID = UUID(uuidString: dbID) {
-                    DispatchQueue.main.async {
-                        self.quotes.append(Quote(id: quoteID, quoteText: dbQuoteText, liked: dbLiked))
-                    }
+            
+            self.quotes.removeAll()
+            
+            let documents = snap!.documents
+            let dbID = documents.map { $0["id"] as! String}
+            let dbQuoteText = documents.map { $0["quoteText"] as! String }
+            let dbLiked = documents.map { $0["liked"] as! Bool }
+            
+            for i in 0..<dbID.count {
+                if let quoteID = UUID(uuidString: dbID[i]) {
+                    self.quotes.append(Quote(id: quoteID, quoteText: dbQuoteText[i], liked: dbLiked[i]))
                 }
             }
         }
@@ -42,6 +43,7 @@ class QuotesFactory: ObservableObject {
         }
         return 0
     }
+    
 }
 
 let testFactory = QuotesFactory(quotes: testData) 

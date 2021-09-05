@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct QuoteDetail: View {
     var quote: Quote
@@ -22,9 +23,29 @@ struct QuoteDetail: View {
                 .padding(.all)
                 .onTapGesture {
                     quotesFactory.quotes[quoteIdx].liked.toggle()
+                    let quoteUUID = quotesFactory.quotes[quoteIdx].id
+                    self.updateQuote(with: quoteUUID.uuidString)
                 }
         }
         .font(.largeTitle)
+    }
+    func updateQuote(with id: String) {
+        let db = Firestore.firestore()
+        db.collection("Quotes").whereField("id", isEqualTo: id).getDocuments { (snap, err) in
+            
+            if err != nil {
+                print("Error")
+                return
+            }
+            
+            for i in snap!.documents {
+                var dbLiked = i.get("liked") as! Bool
+                dbLiked = !dbLiked
+                DispatchQueue.main.async {
+                    i.reference.updateData(["liked": dbLiked])
+                }
+            }
+        }
     }
 }
 
