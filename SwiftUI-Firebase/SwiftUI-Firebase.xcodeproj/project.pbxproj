@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,13 @@
 		EAE4572726DA714E00B1C59C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4572626DA714E00B1C59C /* Quote.swift */; };
 		EAE4572926DB056100B1C59C /* QuotesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4572826DB056100B1C59C /* QuotesFactory.swift */; };
 		EAE4572B26DE4DD700B1C59C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAE4572A26DE4DD700B1C59C /* GoogleService-Info.plist */; };
+		EAE457A026E470D600B1C59C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE4579F26E470D600B1C59C /* WidgetKit.framework */; };
+		EAE457A226E470D600B1C59C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE457A126E470D600B1C59C /* SwiftUI.framework */; };
+		EAE457A526E470D600B1C59C /* QuotesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE457A426E470D600B1C59C /* QuotesWidget.swift */; };
+		EAE457A826E470D900B1C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE457A726E470D900B1C59C /* Assets.xcassets */; };
+		EAE457AA26E470D900B1C59C /* QuotesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EAE457A626E470D600B1C59C /* QuotesWidget.intentdefinition */; };
+		EAE457AB26E470D900B1C59C /* QuotesWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EAE457A626E470D600B1C59C /* QuotesWidget.intentdefinition */; };
+		EAE457AE26E470D900B1C59C /* QuotesWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EAE4579E26E470D600B1C59C /* QuotesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,28 @@
 			remoteGlobalIDString = EAE456F526DA68CD00B1C59C;
 			remoteInfo = "SwiftUI-Firebase";
 		};
+		EAE457AC26E470D900B1C59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE456EE26DA68CD00B1C59C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAE4579D26E470D600B1C59C;
+			remoteInfo = QuotesWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EAE457AF26E470D900B1C59C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EAE457AE26E470D900B1C59C /* QuotesWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		62BE5949A627C9D7E551F70F /* Pods-SwiftUI-FirebaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-FirebaseTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-FirebaseTests/Pods-SwiftUI-FirebaseTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +91,14 @@
 		EAE4572626DA714E00B1C59C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		EAE4572826DB056100B1C59C /* QuotesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesFactory.swift; sourceTree = "<group>"; };
 		EAE4572A26DE4DD700B1C59C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EAE4579E26E470D600B1C59C /* QuotesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuotesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE4579F26E470D600B1C59C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EAE457A126E470D600B1C59C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EAE457A426E470D600B1C59C /* QuotesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesWidget.swift; sourceTree = "<group>"; };
+		EAE457A626E470D600B1C59C /* QuotesWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = QuotesWidget.intentdefinition; sourceTree = "<group>"; };
+		EAE457A726E470D900B1C59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAE457A926E470D900B1C59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE457B326E4761700B1C59C /* SwiftUI-Firebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwiftUI-Firebase.entitlements"; sourceTree = "<group>"; };
 		F2F67D706FB1039A6E71C250 /* Pods-SwiftUI-Firebase-SwiftUI-FirebaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Firebase-SwiftUI-FirebaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Firebase-SwiftUI-FirebaseUITests/Pods-SwiftUI-Firebase-SwiftUI-FirebaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7759198E381FDF1E2C32D4F /* Pods_SwiftUI_Firebase_SwiftUI_FirebaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_Firebase_SwiftUI_FirebaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +128,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAE4579B26E470D600B1C59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE457A226E470D600B1C59C /* SwiftUI.framework in Frameworks */,
+				EAE457A026E470D600B1C59C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +146,8 @@
 				6DC0EC1DF35B5E542BC3A5D7 /* Pods_SwiftUI_Firebase.framework */,
 				F7759198E381FDF1E2C32D4F /* Pods_SwiftUI_Firebase_SwiftUI_FirebaseUITests.framework */,
 				68DEA6ECE357933C52D95472 /* Pods_SwiftUI_FirebaseTests.framework */,
+				EAE4579F26E470D600B1C59C /* WidgetKit.framework */,
+				EAE457A126E470D600B1C59C /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,7 +162,6 @@
 				91A600F7071193CCD39D0D3F /* Pods-SwiftUI-FirebaseTests.debug.xcconfig */,
 				62BE5949A627C9D7E551F70F /* Pods-SwiftUI-FirebaseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -125,6 +171,7 @@
 				EAE456F826DA68CD00B1C59C /* SwiftUI-Firebase */,
 				EAE4570A26DA68CE00B1C59C /* SwiftUI-FirebaseTests */,
 				EAE4571526DA68CE00B1C59C /* SwiftUI-FirebaseUITests */,
+				EAE457A326E470D600B1C59C /* QuotesWidget */,
 				EAE456F726DA68CD00B1C59C /* Products */,
 				CFD7B848BC1E15F7572413B0 /* Pods */,
 				AAB375FAAE494642228F85F6 /* Frameworks */,
@@ -137,6 +184,7 @@
 				EAE456F626DA68CD00B1C59C /* SwiftUI-Firebase.app */,
 				EAE4570726DA68CE00B1C59C /* SwiftUI-FirebaseTests.xctest */,
 				EAE4571226DA68CE00B1C59C /* SwiftUI-FirebaseUITests.xctest */,
+				EAE4579E26E470D600B1C59C /* QuotesWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +192,7 @@
 		EAE456F826DA68CD00B1C59C /* SwiftUI-Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				EAE457B326E4761700B1C59C /* SwiftUI-Firebase.entitlements */,
 				EAE456F926DA68CD00B1C59C /* SwiftUI_FirebaseApp.swift */,
 				EAE456FB26DA68CD00B1C59C /* ContentView.swift */,
 				EAE4572626DA714E00B1C59C /* Quote.swift */,
@@ -183,6 +232,17 @@
 			path = "SwiftUI-FirebaseUITests";
 			sourceTree = "<group>";
 		};
+		EAE457A326E470D600B1C59C /* QuotesWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EAE457A426E470D600B1C59C /* QuotesWidget.swift */,
+				EAE457A626E470D600B1C59C /* QuotesWidget.intentdefinition */,
+				EAE457A726E470D900B1C59C /* Assets.xcassets */,
+				EAE457A926E470D900B1C59C /* Info.plist */,
+			);
+			path = QuotesWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,10 +256,12 @@
 				EAE456F426DA68CD00B1C59C /* Resources */,
 				F96953FA77D9938492B53AB9 /* [CP] Embed Pods Frameworks */,
 				ED15707B3B986C0156D07A39 /* [CP] Copy Pods Resources */,
+				EAE457AF26E470D900B1C59C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EAE457AD26E470D900B1C59C /* PBXTargetDependency */,
 			);
 			name = "SwiftUI-Firebase";
 			productName = "SwiftUI-Firebase";
@@ -246,6 +308,23 @@
 			productReference = EAE4571226DA68CE00B1C59C /* SwiftUI-FirebaseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EAE4579D26E470D600B1C59C /* QuotesWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE457B226E470D900B1C59C /* Build configuration list for PBXNativeTarget "QuotesWidgetExtension" */;
+			buildPhases = (
+				EAE4579A26E470D600B1C59C /* Sources */,
+				EAE4579B26E470D600B1C59C /* Frameworks */,
+				EAE4579C26E470D600B1C59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuotesWidgetExtension;
+			productName = QuotesWidgetExtension;
+			productReference = EAE4579E26E470D600B1C59C /* QuotesWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +345,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = EAE456F526DA68CD00B1C59C;
 					};
+					EAE4579D26E470D600B1C59C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 				};
 			};
 			buildConfigurationList = EAE456F126DA68CD00B1C59C /* Build configuration list for PBXProject "SwiftUI-Firebase" */;
@@ -284,6 +366,7 @@
 				EAE456F526DA68CD00B1C59C /* SwiftUI-Firebase */,
 				EAE4570626DA68CE00B1C59C /* SwiftUI-FirebaseTests */,
 				EAE4571126DA68CE00B1C59C /* SwiftUI-FirebaseUITests */,
+				EAE4579D26E470D600B1C59C /* QuotesWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -310,6 +393,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE4579C26E470D600B1C59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE457A826E470D900B1C59C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +551,7 @@
 				EAE4572926DB056100B1C59C /* QuotesFactory.swift in Sources */,
 				EAE4572726DA714E00B1C59C /* Quote.swift in Sources */,
 				EAE4572526DA6F8300B1C59C /* QuoteDetail.swift in Sources */,
+				EAE457AB26E470D900B1C59C /* QuotesWidget.intentdefinition in Sources */,
 				EAE456FC26DA68CD00B1C59C /* ContentView.swift in Sources */,
 				EAE456FA26DA68CD00B1C59C /* SwiftUI_FirebaseApp.swift in Sources */,
 			);
@@ -481,6 +573,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAE4579A26E470D600B1C59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE457A526E470D600B1C59C /* QuotesWidget.swift in Sources */,
+				EAE457AA26E470D900B1C59C /* QuotesWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -493,6 +594,11 @@
 			isa = PBXTargetDependency;
 			target = EAE456F526DA68CD00B1C59C /* SwiftUI-Firebase */;
 			targetProxy = EAE4571326DA68CE00B1C59C /* PBXContainerItemProxy */;
+		};
+		EAE457AD26E470D900B1C59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAE4579D26E470D600B1C59C /* QuotesWidgetExtension */;
+			targetProxy = EAE457AC26E470D900B1C59C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -617,10 +723,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7393E05C730E55D1339B9A6A /* Pods-SwiftUI-Firebase.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftUI-Firebase/SwiftUI-Firebase.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Firebase/Preview Content\"";
+				DEVELOPMENT_TEAM = T7A75J452Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-Firebase/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -639,10 +748,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B190DC756BF8008C6C80EF29 /* Pods-SwiftUI-Firebase.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftUI-Firebase/SwiftUI-Firebase.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Firebase/Preview Content\"";
+				DEVELOPMENT_TEAM = T7A75J452Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-Firebase/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -741,6 +853,46 @@
 			};
 			name = Release;
 		};
+		EAE457B026E470D900B1C59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuotesWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sampoo.SwiftUI-Firebase.QuotesWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAE457B126E470D900B1C59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuotesWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sampoo.SwiftUI-Firebase.QuotesWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -776,6 +928,15 @@
 			buildConfigurations = (
 				EAE4572226DA68CF00B1C59C /* Debug */,
 				EAE4572326DA68CF00B1C59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE457B226E470D900B1C59C /* Build configuration list for PBXNativeTarget "QuotesWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE457B026E470D900B1C59C /* Debug */,
+				EAE457B126E470D900B1C59C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

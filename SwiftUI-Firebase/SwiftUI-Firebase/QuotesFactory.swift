@@ -23,7 +23,7 @@ class QuotesFactory: ObservableObject {
             self.quotes.removeAll()
             
             let documents = snap!.documents
-            let dbID = documents.map { $0["id"] as! String}
+            let dbID = documents.map { $0["id"] as! String }
             let dbQuoteText = documents.map { $0["quoteText"] as! String }
             let dbLiked = documents.map { $0["liked"] as! Bool }
             
@@ -32,6 +32,9 @@ class QuotesFactory: ObservableObject {
                     self.quotes.append(Quote(id: quoteID, quoteText: dbQuoteText[i], liked: dbLiked[i]))
                 }
             }
+            
+            let quoteData = try! JSONEncoder().encode(self.quotes)
+            UserDefaults(suiteName: "group.com.Quotes.quoteContainer")!.set(quoteData, forKey: "quoteData") 
         }
     }
     

@@ -14,9 +14,6 @@ struct SwiftUI_FirebaseApp: App {
     @StateObject private var quotesFactory = QuotesFactory()
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
-    
-    
     var body: some Scene {
         WindowGroup {
             ContentView(quotesFactory: testFactory)
